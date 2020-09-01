@@ -1,3 +1,5 @@
+# Semantic Interest Miner Frontend
+
 This is the frontend for the Semantic Interest Miner web application.
 
 Steps to start the server:
