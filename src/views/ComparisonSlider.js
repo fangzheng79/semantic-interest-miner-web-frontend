@@ -1,7 +1,7 @@
 import React from "react";
 
 // reactstrap components
-import { Button, Card, Row, Col, CardHeader } from "reactstrap";
+import { Card, Row, Col, CardHeader } from "reactstrap";
 // core components
 import { toast } from "react-toastify";
 import Loader from "react-loader-spinner";
@@ -11,9 +11,7 @@ import RestAPI from "../services/api";
 import CloudChart from "../components/Chart/CloudChart";
 import { getItem } from "utils/localStorage";
 import "d3-transition";
-import { Modal, ModalBody, ModalFooter } from "reactstrap";
-import { TwitterTweetEmbed } from "react-twitter-embed";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+
 import "react-tabs/style/react-tabs.css";
 import "../assets/scss/custom.css";
 

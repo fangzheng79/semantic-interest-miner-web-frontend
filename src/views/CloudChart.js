@@ -1,8 +1,6 @@
 import React from "react";
 import Chart from "chart.js";
 import CloudChart from "../components/Chart/CloudChart";
-import { Link } from "react-router-dom";
-
 import { Card, CardHeader, CardBody, Container, Row, Col } from "reactstrap";
 
 // core components

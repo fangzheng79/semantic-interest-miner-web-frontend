@@ -302,7 +302,7 @@ class Profile extends React.Component {
                                   name="author_id"
                                   value={author_id}
                                   onChange={this.handleChange}
-                                  placeholder="City"
+                                  placeholder="Semantic Scholar Id"
                                   type="text"
                                 />
                               </FormGroup>

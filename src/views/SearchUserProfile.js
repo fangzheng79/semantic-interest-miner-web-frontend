@@ -1,28 +1,19 @@
 import React from "react";
 
 // reactstrap components
-import {
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  Container,
-  Row,
-  Col,
-} from "reactstrap";
+import {Container} from "reactstrap";
 // core components
 import SearchUserHeader from "components/Headers/SearchUserHeader.js";
 import { toast } from "react-toastify";
-import Loader from "react-loader-spinner";
+
 import { handleServerErrors } from "utils/errorHandler";
 import RestAPI from "../services/api";
 import "d3-transition";
 import ComparisonSlider from "../views/ComparisonSlider.js";
 import "react-tabs/style/react-tabs.css";
 import "../assets/scss/custom.css";
-import swal from "@sweetalert/with-react";
 import { setItem } from "utils/localStorage";
-import { ThemeProvider } from "@material-ui/core";
+
 
 
 

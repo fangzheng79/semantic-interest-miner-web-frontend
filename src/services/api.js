@@ -3,6 +3,21 @@ import { BASE_URL } from "../constants";
 import axios from "axios";
 
 class RestAPI {
+
+  static refreshPaper(data) {
+    return axios({
+      method: "post",
+      url: `${BASE_URL}/api/interests/trigger-paper-updata/`,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        Authorization: `Token ${getItem("accessToken")}`,
+      },
+      data: {},
+    }).then((res) => res);
+  }
+
+
   static refreshData(data) {
     return axios({
       method: "post",

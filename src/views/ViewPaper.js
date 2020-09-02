@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import Loader from "react-loader-spinner";
 import { handleServerErrors } from "utils/errorHandler";
+import user from "../services/api";
 
 // reactstrap components
 import {
@@ -166,6 +167,29 @@ class ViewPaper extends React.Component {
     });
   };
 
+
+  refreshPaper = () => {
+    this.setState({ isLoding1: true }, () => {
+      user
+        .refreshPaper()
+        .then((response) => {
+          toast.success("New data will be available in a few minutes!", {
+            position: toast.POSITION.TOP_RIGHT,
+            autoClose: 2000,
+          });
+        })
+        .catch((error) => {
+          this.setState({ isLoding1: false });
+          handleServerErrors(error, toast.error);
+        });
+    });
+  };
+
+
+
+
+
+
   handleChange = (e) => {
     let getValue = e.target.value;
     let getName = e.target.name;
@@ -183,6 +207,9 @@ class ViewPaper extends React.Component {
               <Card className="shadow">
                 <CardHeader className="border-0">
                   <h3 className="mb-0">Papers tables</h3>
+                  <Button color="info" onClick={this.refreshPaper} style={{left:"1300px",}}>
+                        Refresh Paper Data
+                  </Button>
                 </CardHeader>
                 <Table className="align-items-center table-flush" responsive>
                   <thead className="thead-light">

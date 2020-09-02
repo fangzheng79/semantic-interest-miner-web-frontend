@@ -7,10 +7,6 @@ import "d3-transition";
 
 import { handleServerErrors } from "utils/errorHandler";
 
-import { Modal, ModalBody, ModalFooter, Button } from "reactstrap";
-import { TwitterTweetEmbed } from "react-twitter-embed";
-
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
 import ReactWordcloud from "react-wordcloud";
