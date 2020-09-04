@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { handleServerErrors } from "utils/errorHandler";
 import RestAPI from "../services/api";
 // reactstrap components
-import { Card, CardBody, Col, Row, Container } from "reactstrap";
+import { Card, CardBody, Row, Container } from "reactstrap";
 import { getItem } from "utils/localStorage";
 class LoginRedirecting extends React.Component {
   state = {
